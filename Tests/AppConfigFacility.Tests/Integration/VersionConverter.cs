@@ -1,7 +1,7 @@
 ﻿namespace AppConfigFacility.Tests.Integration
 {
-    using System;
     using Castle.Core.Configuration;
+    using System;
 
     [Serializable]
     public class VersionConverter : AbstractTypeConverter

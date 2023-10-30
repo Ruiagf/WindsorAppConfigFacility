@@ -1,8 +1,8 @@
 ﻿namespace AppConfigFacility.Tests.Integration
 {
-    using System;
     using Castle.Core.Configuration;
     using Castle.MicroKernel.SubSystems.Conversion;
+    using System;
 
     /// <summary>
     ///     Base implementation of <see cref="T:Castle.MicroKernel.SubSystems.Conversion.ITypeConverter" />
