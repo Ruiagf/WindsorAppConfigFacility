@@ -17,7 +17,7 @@
   		OutputFile="SolutionInfo.cs"
   		AssemblyVersion="$(Version)"
   		AssemblyFileVersion="$(Version)"
-  		AssemblyCopyright="Copyright (c) Adam Connelly, 2014" />
+  		AssemblyCopyright="Copyright (c) Adam Connelly, 2014-2023" />
   </Target>
  
   <Target Name="Build" DependsOnTargets="GenerateAssemblyInfo">
