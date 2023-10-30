@@ -1,11 +1,11 @@
 ﻿namespace AppConfigFacility
 {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
     using Castle.Core;
     using Castle.Core.Interceptor;
     using Castle.DynamicProxy;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Intercepts calls to a settings interface to provide the values from the config.

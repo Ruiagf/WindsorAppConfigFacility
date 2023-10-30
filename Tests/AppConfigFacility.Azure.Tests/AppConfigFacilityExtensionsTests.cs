@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using Microsoft.Azure;
-
-namespace AppConfigFacility.Azure.Tests
+﻿namespace AppConfigFacility.Azure.Tests
 {
+    using System.Linq;
     using Castle.Windsor;
     using NUnit.Framework;
 

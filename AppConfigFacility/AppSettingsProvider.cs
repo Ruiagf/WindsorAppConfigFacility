@@ -1,8 +1,6 @@
-﻿using Castle.MicroKernel;
-using Castle.MicroKernel.SubSystems.Conversion;
-
-namespace AppConfigFacility
+﻿namespace AppConfigFacility
 {
+    using Castle.MicroKernel.SubSystems.Conversion;
     using System.Configuration;
 
     /// <summary>

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Castle.MicroKernel;
-using Castle.MicroKernel.SubSystems.Conversion;
-
-namespace AppConfigFacility
+﻿namespace AppConfigFacility
 {
+    using Castle.MicroKernel.SubSystems.Conversion;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     /// <summary>
     /// A wrapper around several <see cref="ISettingsProvider"/> objects that will attempt to get
     /// settings from each one in turn.

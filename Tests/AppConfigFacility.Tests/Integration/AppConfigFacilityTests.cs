@@ -1,13 +1,11 @@
-﻿using Castle.Core.Configuration;
-using Castle.MicroKernel.SubSystems.Conversion;
-
-namespace AppConfigFacility.Tests.Integration
+﻿namespace AppConfigFacility.Tests.Integration
 {
-    using System;
-    using System.Configuration;
     using Castle.MicroKernel.Registration;
+    using Castle.MicroKernel.SubSystems.Conversion;
     using Castle.Windsor;
     using NUnit.Framework;
+    using System;
+    using System.Configuration;
 
     [TestFixture]
     public class AppConfigFacilityTests

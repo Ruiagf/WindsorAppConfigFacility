@@ -1,9 +1,9 @@
-﻿using System;
-using Castle.MicroKernel.SubSystems.Conversion;
-using NUnit.Framework;
-
-namespace AppConfigFacility.Tests.Unit
+﻿namespace AppConfigFacility.Tests.Unit
 {
+    using System;
+    using Castle.MicroKernel.SubSystems.Conversion;
+    using NUnit.Framework;
+
     [TestFixture]
     public class EnvironmentSettingsProviderTests
     {

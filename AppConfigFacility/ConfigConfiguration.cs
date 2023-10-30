@@ -37,6 +37,7 @@
             // We need to wrap the accessFunc in another Func because the interceptor doesn't know what type it's
             // intercepting, so it needs a Func<object, object>.
             _computedDictionary[GetPropertyName(propertyExpression)] = o => accessFunc((T) o);
+
             return this;
         }
 
@@ -48,6 +49,7 @@
         public IConfigConfiguration<T> WithPrefix(string prefix)
         {
             Prefix = prefix;
+
             return this;
         }
 

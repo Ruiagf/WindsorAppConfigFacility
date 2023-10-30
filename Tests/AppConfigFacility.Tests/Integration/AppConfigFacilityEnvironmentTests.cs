@@ -1,10 +1,9 @@
 ﻿namespace AppConfigFacility.Tests.Integration
 {
-    using System;
-    using System.Configuration;
     using Castle.MicroKernel.Registration;
     using Castle.Windsor;
     using NUnit.Framework;
+    using System;
 
     [TestFixture]
     public class AppConfigFacilityEnvironmentTests

@@ -1,14 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using Castle.MicroKernel;
-using Castle.MicroKernel.SubSystems.Conversion;
-
-namespace AppConfigFacility
+﻿namespace AppConfigFacility
 {
-    using System;
+    using Castle.MicroKernel;
     using Castle.MicroKernel.Facilities;
     using Castle.MicroKernel.Registration;
+    using Castle.MicroKernel.SubSystems.Conversion;
+    using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
 
     /// <summary>
     /// A facility that allows you to create automatically implemented settings interfaces to

@@ -1,9 +1,8 @@
-﻿using System;
-using Castle.MicroKernel;
-using Castle.MicroKernel.SubSystems.Conversion;
-
-namespace AppConfigFacility
+﻿namespace AppConfigFacility
 {
+    using Castle.MicroKernel.SubSystems.Conversion;
+    using System;
+
     /// <summary>
     /// Used to get settings from environment variables. If an environment variable doesn't exist
     /// or is empty for the specified key, the provider falls back to app settings.

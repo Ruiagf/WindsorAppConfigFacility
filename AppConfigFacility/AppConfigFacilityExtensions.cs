@@ -1,7 +1,7 @@
-﻿using System.Configuration;
-
-namespace AppConfigFacility
+﻿namespace AppConfigFacility
 {
+    using System.Configuration;
+
     /// <summary>
     /// Extensions for the <see cref="AppConfigFacility"/>.
     /// </summary>

@@ -1,8 +1,7 @@
-﻿using Castle.MicroKernel;
-using Castle.MicroKernel.SubSystems.Conversion;
-
-namespace AppConfigFacility.Azure
+﻿namespace AppConfigFacility.Azure
 {
+    using Castle.MicroKernel.SubSystems.Conversion;
+
     using Microsoft.Azure;
 
     /// <summary>

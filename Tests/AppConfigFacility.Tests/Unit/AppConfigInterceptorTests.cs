@@ -1,13 +1,11 @@
-﻿using Castle.MicroKernel;
-
-namespace AppConfigFacility.Tests.Unit
+﻿namespace AppConfigFacility.Tests.Unit
 {
-    using System;
-    using System.Collections.Generic;
     using Castle.Core;
-    using Castle.DynamicProxy;
+    using Castle.MicroKernel;
     using Moq;
     using NUnit.Framework;
+    using System;
+    using System.Collections.Generic;
 
     [TestFixture]
     public class AppConfigInterceptorTests
@@ -23,7 +21,7 @@ namespace AppConfigFacility.Tests.Unit
 
             _settingsProvider.Setup(p => p.GetSetting("Name", typeof (string))).Returns("My Name");
             var invocation =
-                Mock.Of<IInvocation>(
+                Mock.Of<Castle.DynamicProxy.IInvocation>(
                     i =>
                         i.Method.DeclaringType == typeof (AppConfigInterceptorTests) && i.Method.ReturnType == typeof (string) &&
                         i.Method.Name == "get_Name");
@@ -48,7 +46,7 @@ namespace AppConfigFacility.Tests.Unit
 
             _settingsProvider.Setup(p => p.GetSetting("SomePrefix:Name", typeof(string))).Returns("My Name");
             var invocation =
-                Mock.Of<IInvocation>(
+                Mock.Of<Castle.DynamicProxy.IInvocation>(
                     i =>
                         i.Method.DeclaringType == typeof(AppConfigInterceptorTests) && i.Method.ReturnType == typeof(string) &&
                         i.Method.Name == "get_Name");
@@ -67,7 +65,7 @@ namespace AppConfigFacility.Tests.Unit
             var interceptor = CreateInterceptor();
 
             var invocation =
-                Mock.Of<IInvocation>(i => i.Method.Name == "DoSomething");
+                Mock.Of<Castle.DynamicProxy.IInvocation>(i => i.Method.Name == "DoSomething");
 
             // Act
             var exception = Assert.Throws<InvalidOperationException>(() => interceptor.Intercept(invocation));
@@ -83,7 +81,7 @@ namespace AppConfigFacility.Tests.Unit
             object expectedName = "Test Name";
             var interceptor = CreateInterceptor();
 
-            var invocation = Mock.Of<IInvocation>(i => i.Method.Name == "get_Name" && i.Method.DeclaringType == typeof(AppConfigInterceptorTests));
+            var invocation = Mock.Of<Castle.DynamicProxy.IInvocation>(i => i.Method.Name == "get_Name" && i.Method.DeclaringType == typeof(AppConfigInterceptorTests));
 
             _settingsCache.Setup(c => c.TryGetValue(typeof(AppConfigInterceptorTests).FullName + ".Name", out expectedName)).Returns(true);
 
@@ -103,7 +101,7 @@ namespace AppConfigFacility.Tests.Unit
 
             _settingsProvider.Setup(p => p.GetSetting("Name", typeof(string))).Returns(expectedValue);
             var invocation =
-                Mock.Of<IInvocation>(
+                Mock.Of<Castle.DynamicProxy.IInvocation>(
                     i =>
                         i.Method.ReturnType == typeof (string) && i.Method.Name == "get_Name" &&
                         i.Method.DeclaringType == typeof(AppConfigInterceptorTests));

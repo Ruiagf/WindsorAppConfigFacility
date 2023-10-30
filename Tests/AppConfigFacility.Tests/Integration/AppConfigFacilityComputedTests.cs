@@ -1,9 +1,9 @@
 ﻿namespace AppConfigFacility.Tests.Integration
 {
-    using System.Configuration;
     using Castle.MicroKernel.Registration;
     using Castle.Windsor;
     using NUnit.Framework;
+    using System.Configuration;
 
     [TestFixture]
     public class AppConfigFacilityComputedTests

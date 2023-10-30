@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using Castle.MicroKernel.SubSystems.Conversion;
-using NUnit.Framework;
-
-namespace AppConfigFacility.Tests.Unit
+﻿namespace AppConfigFacility.Tests.Unit
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using Castle.MicroKernel.SubSystems.Conversion;
+    using NUnit.Framework;
+
     [TestFixture]
     public class AggregateSettingsProviderTests
     {
